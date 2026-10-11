@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pop@Pic! - Live Capture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#8455ef",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-container": "#f9fdff",
+                        "surface-dim": "#d8dadc",
+                        "on-background": "#191c1e",
+                        "surface": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-container": "#008096",
+                        "inverse-primary": "#d0bcff",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary": "#b4136d",
+                        "outline-variant": "#cbc3d7",
+                        "secondary-container": "#fd56a7",
+                        "secondary-fixed": "#ffd9e4",
+                        "on-primary-fixed-variant": "#5516be",
+                        "secondary-fixed-dim": "#ffb0cd",
+                        "outline": "#7b7486",
+                        "background": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "on-surface-variant": "#494454",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary-fixed-variant": "#8c0053",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#6d3bd7",
+                        "primary-fixed": "#e9ddff",
+                        "on-secondary-fixed": "#3e0022",
+                        "on-secondary-container": "#600037",
+                        "on-primary-container": "#fffbff",
+                        "on-surface": "#191c1e",
+                        "primary": "#6b38d4",
+                        "tertiary": "#006577",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-primary-fixed": "#23005c",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#acedff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "40px",
+                        "container-padding-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "label-bold": ["Outfit"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md text-body-md overflow-hidden">
+<header class="w-full flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop py-6 absolute top-0 z-50 pointer-events-none">
+<button class="pointer-events-auto flex items-center gap-2 bg-white/70 backdrop-blur-xl px-5 py-3 rounded-full shadow-[0_4px_20px_rgba(139,92,246,0.1)] text-primary font-label-bold text-label-bold hover:bg-white transition-colors duration-300 group">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+            Frames
+        </button>
+<div class="pointer-events-auto bg-white/70 backdrop-blur-xl px-5 py-3 rounded-full shadow-[0_4px_20px_rgba(139,92,246,0.1)] flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(180,19,109,0.6)] animate-pulse"></div>
+<span class="font-label-bold text-label-bold text-on-surface-variant tracking-wider uppercase">Live</span>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-container-padding-mobile md:px-container-padding-desktop pt-24 pb-8 w-full max-w-7xl mx-auto h-screen">
+<div class="relative w-full aspect-video md:aspect-[16/9] max-h-[716px] rounded-xl overflow-hidden shadow-[0_12px_60px_rgba(139,92,246,0.2)] bg-surface-container-lowest flex items-center justify-center isolation-auto">
+<img alt="Camera feed preview" class="absolute inset-0 w-full h-full object-cover" data-alt="A lively group of friends laughing and posing excitedly in front of a camera. The setting is a brightly lit, modern studio with high-key lighting that creates a fresh, vibrant aesthetic. The colors are punchy, fitting the energetic, main character vibe of a social photo booth experience. The background is slightly out of focus, emphasizing the subjects' spontaneous expressions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9nsyWXj-2KUfwXW5Q-SMSljcTjCvcBY0q2IL0KMt-ZfJa8IRFeExcBrOFRT4Et4omKlZNMXZMSwsAP5WbPUAzjJuVpmuhoY-w-dKg-6ZyoOO5i1SDtPfm_iA7f9R3iJs_N0RWWZ5vHi-diFXWOwnIhcQUJbuKSzRBPgtDh7vkVEEWyzLnlHvxQZdBw1sLUiDamVZMLzqonZl-H6CUUpw001fEJuRnqy2Rwl5gAgLDObI0TYLFwoQbKegRIbv_04EZLvJdxCxqkrQE"/>
+<div class="absolute inset-0 pointer-events-none mix-blend-overlay opacity-30 bg-gradient-to-tr from-primary/20 to-secondary/20"></div>
+<div class="absolute inset-0 pointer-events-none p-4 md:p-8 flex flex-col justify-between">
+<div class="w-full h-full border-[6px] border-white/80 rounded-lg shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] relative">
+<div class="absolute top-4 right-4 text-white/90 font-headline-lg-mobile tracking-tighter drop-shadow-md mix-blend-overlay">
+                        Neon Nights
+                    </div>
+<div class="absolute -inset-[6px] border-[2px] border-secondary/40 rounded-lg blur-[2px]"></div>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+<div class="text-[120px] md:text-[180px] font-headline-xl text-white drop-shadow-[0_8px_30px_rgba(107,56,212,0.6)] leading-none select-none transition-transform duration-300 scale-100" id="countdown-display">
+                    3
+                </div>
+</div>
+<div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+</div>
+<div class="mt-8 md:mt-12 w-full flex flex-col items-center justify-center gap-6 z-10 shrink-0"><div class="flex items-center justify-center gap-8 md:gap-12 relative"><button class="group flex flex-col items-center gap-2 outline-none transition-all duration-300 hover:scale-105 active:scale-95" onclick="document.getElementById('gallery-modal').classList.remove('hidden')" type="button"><div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/80 backdrop-blur-xl border-2 border-outline-variant/40 flex items-center justify-center shadow-[0_4px_20px_rgba(139,92,246,0.15)] group-hover:border-primary group-hover:shadow-[0_8px_25px_rgba(107,56,212,0.25)] transition-all duration-300 text-primary"><span class="material-symbols-outlined text-[26px] md:text-[28px]">photo_library</span></div><span class="font-label-bold text-label-bold text-on-surface-variant group-hover:text-primary transition-colors tracking-wider uppercase text-xs">Upload</span></button><div class="flex flex-col items-center gap-3"><button class="relative group w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center outline-none focus:ring-4 focus:ring-primary/30 transition-all duration-300 hover:scale-105 active:scale-95" id="capture-btn"><div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary shadow-[0_8px_30px_rgba(180,19,109,0.5)] group-hover:shadow-[0_12px_40px_rgba(180,19,109,0.7)] transition-shadow duration-300"></div><div class="relative w-[85%] h-[85%] rounded-full border-4 border-white flex items-center justify-center group-hover:border-opacity-80 transition-all"><span class="material-symbols-outlined text-white text-[32px] md:text-[40px]">photo_camera</span></div></button><span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest text-xs">Ready</span></div><button class="group flex flex-col items-center gap-2 outline-none transition-all duration-300 hover:scale-105 active:scale-95" type="button"><div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/80 backdrop-blur-xl border-2 border-outline-variant/40 flex items-center justify-center shadow-[0_4px_20px_rgba(139,92,246,0.15)] group-hover:border-primary group-hover:shadow-[0_8px_25px_rgba(107,56,212,0.25)] transition-all duration-300 text-primary"><span class="material-symbols-outlined text-[26px] md:text-[28px]">flip_camera_ios</span></div><span class="font-label-bold text-label-bold text-on-surface-variant group-hover:text-primary transition-colors tracking-wider uppercase text-xs">Flip</span></button></div></div>
+</main>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const captureBtn = document.getElementById('capture-btn');
+            const countdownDisplay = document.getElementById('countdown-display');
+            let isCounting = false;
+
+            captureBtn.addEventListener('click', () => {
+                if (isCounting) return;
+                isCounting = true;
+                
+                let count = 3;
+                countdownDisplay.textContent = count;
+                countdownDisplay.classList.remove('scale-100', 'opacity-0');
+                countdownDisplay.classList.add('scale-110');
+                
+                captureBtn.classList.add('opacity-50', 'pointer-events-none');
+
+                const interval = setInterval(() => {
+                    count--;
+                    if (count > 0) {
+                        countdownDisplay.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            countdownDisplay.textContent = count;
+                            countdownDisplay.style.transform = 'scale(1.1)';
+                        }, 150);
+                    } else if (count === 0) {
+                        countdownDisplay.textContent = 'Smile!';
+                        countdownDisplay.classList.add('text-secondary', 'drop-shadow-[0_8px_30px_rgba(253,86,167,0.8)]');
+                        countdownDisplay.classList.remove('drop-shadow-[0_8px_30px_rgba(107,56,212,0.6)]');
+                    } else {
+                        clearInterval(interval);
+                        
+                        countdownDisplay.style.opacity = '0';
+                        setTimeout(() => {
+                            countdownDisplay.textContent = '';
+                            countdownDisplay.style.opacity = '1';
+                            countdownDisplay.classList.remove('text-secondary', 'drop-shadow-[0_8px_30px_rgba(253,86,167,0.8)]');
+                            countdownDisplay.classList.add('drop-shadow-[0_8px_30px_rgba(107,56,212,0.6)]');
+                            isCounting = false;
+                            captureBtn.classList.remove('opacity-50', 'pointer-events-none');
+                        }, 500);
+                    }
+                }, 1000);
+            });
+        });
+    </script>
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4" id="gallery-modal"><div class="bg-surface rounded-xl shadow-[0_12px_60px_rgba(107,56,212,0.35)] w-full max-w-2xl border border-white/60 overflow-hidden flex flex-col"><div class="px-6 py-4 border-b border-surface-variant flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">crop</span></div><div><h3 class="font-headline-lg-mobile text-on-surface font-bold text-base leading-tight">Crop &amp; Adjust Photo</h3><p class="text-xs text-on-surface-variant">Fit your photo into the 16:9 photobooth frame</p></div></div><button class="w-8 h-8 rounded-full bg-surface-variant/60 hover:bg-surface-variant flex items-center justify-center text-on-surface-variant transition-colors" onclick="document.getElementById('gallery-modal').classList.add('hidden')"><span class="material-symbols-outlined text-[18px]">close</span></button></div><div class="p-6 flex flex-col items-center gap-5"><div class="relative w-full aspect-video rounded-lg overflow-hidden border-2 border-secondary/50 bg-black/80 flex items-center justify-center shadow-inner group"><img alt="Upload preview" class="w-full h-full object-cover scale-100 transition-transform duration-150" id="crop-preview-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9nsyWXj-2KUfwXW5Q-SMSljcTjCvcBY0q2IL0KMt-ZfJa8IRFeExcBrOFRT4Et4omKlZNMXZMSwsAP5WbPUAzjJuVpmuhoY-w-dKg-6ZyoOO5i1SDtPfm_iA7f9R3iJs_N0RWWZ5vHi-diFXWOwnIhcQUJbuKSzRBPgtDh7vkVEEWyzLnlHvxQZdBw1sLUiDamVZMLzqonZl-H6CUUpw001fEJuRnqy2Rwl5gAgLDObI0TYLFwoQbKegRIbv_04EZLvJdxCxqkrQE"/><div class="absolute inset-4 border border-dashed border-white/80 rounded pointer-events-none flex flex-col justify-between p-2"><div class="flex justify-between text-[11px] font-label-bold text-white/90 drop-shadow bg-black/40 px-2 py-0.5 rounded w-fit">16:9 Ratio</div><div class="text-right text-[11px] font-label-bold text-white/90 drop-shadow">Neon Nights Frame Preview</div></div></div><div class="w-full flex items-center justify-between gap-4 px-2"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-[20px]">zoom_out</span><input class="w-32 md:w-48 accent-primary cursor-pointer" max="180" min="100" oninput="document.getElementById('crop-preview-img').style.transform = 'scale(' + (this.value/100) + ')'" type="range" value="100"/><span class="material-symbols-outlined text-primary text-[20px]">zoom_in</span></div><label class="cursor-pointer flex items-center gap-2 text-primary font-label-bold text-xs uppercase tracking-wider hover:underline"><span class="material-symbols-outlined text-[18px]">upload_file</span> Choose File<input accept="image/*" class="hidden" onchange="if(this.files &amp;&amp; this.files[0]) { const r = new FileReader(); r.onload = e =&gt; document.getElementById('crop-preview-img').src = e.target.result; r.readAsDataURL(this.files[0]); }" type="file"/></label></div></div><div class="px-6 py-4 bg-surface-container-low border-t border-surface-variant flex justify-end gap-3"><button class="px-4 py-2.5 rounded-full text-on-surface-variant font-label-bold text-xs uppercase tracking-wider hover:bg-surface-variant transition-colors" onclick="document.getElementById('gallery-modal').classList.add('hidden')">Cancel</button><button class="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-label-bold text-xs uppercase tracking-wider shadow-[0_4px_15px_rgba(107,56,212,0.4)] hover:shadow-[0_6px_20px_rgba(180,19,109,0.6)] transition-all" onclick="document.querySelector('main img').src = document.getElementById('crop-preview-img').src; document.getElementById('gallery-modal').classList.add('hidden');">Apply to Booth</button></div></div></div></body></html>
