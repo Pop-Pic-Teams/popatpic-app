@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><title>Pop@Pic!</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#4cd7f6", "surface-variant": "#e0e3e5", "on-secondary-container": "#600037", "surface-container-highest": "#e0e3e5", "inverse-surface": "#2d3133", "primary-container": "#8455ef", "secondary-fixed": "#ffd9e4", "on-tertiary-fixed-variant": "#004e5c", "primary": "#6b38d4", "on-primary-container": "#fffbff", "on-secondary-fixed-variant": "#8c0053", "on-surface": "#191c1e", "surface-dim": "#d8dadc", "secondary-container": "#fd56a7", "on-secondary-fixed": "#3e0022", "primary-fixed": "#e9ddff", "on-error": "#ffffff", "primary-fixed-dim": "#d0bcff", "on-primary-fixed-variant": "#5516be", "secondary-fixed-dim": "#ffb0cd", "tertiary": "#006577", "on-tertiary-container": "#f9fdff", "on-primary-fixed": "#23005c", "surface-container-lowest": "#ffffff", "secondary": "#b4136d", "outline-variant": "#cbc3d7", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "surface-tint": "#6d3bd7", "on-surface-variant": "#494454", "surface": "#f7f9fb", "background": "#f7f9fb", "tertiary-fixed": "#acedff", "surface-container-low": "#f2f4f6", "error": "#ba1a1a", "on-background": "#191c1e", "surface-bright": "#f7f9fb", "surface-container-high": "#e6e8ea", "on-primary": "#ffffff", "on-tertiary-fixed": "#001f26", "tertiary-container": "#008096", "inverse-primary": "#d0bcff", "outline": "#7b7486" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "gutter": "24px", "container-padding-mobile": "20px", "section-gap": "80px", "unit": "8px", "container-padding-desktop": "40px" }, "fontFamily": { "label-bold": [ "Outfit" ], "body-md": [ "Outfit" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-bold": [ "14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "1.6", "fontWeight": "400" } ], "headline-xl": [ "48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "1.2", "fontWeight": "700" } ], "headline-lg": [ "32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><main class="w-full min-h-screen flex items-center justify-center p-container-padding-mobile md:p-container-padding-desktop"><div class="flex flex-col w-full items-center justify-center relative py-8 px-4">
+<!-- Ambient Neon Backdrop Orbs (Strictly clipped/contained) -->
+<div class="absolute -top-16 -left-16 w-96 h-96 rounded-full bg-primary-fixed-dim/40 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-16 -right-16 w-96 h-96 rounded-full bg-secondary-fixed/50 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full bg-primary/5 blur-[100px] pointer-events-none"></div>
+<!-- Main Container -->
+<div class="relative w-full max-w-xl z-10 flex flex-col items-center">
+<!-- Top Badge & Logo -->
+<div class="flex flex-col items-center text-center mb-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container shadow-sm mb-4">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider text-xs">Pop@Pic! Central Gateway</span>
+</div>
+<!-- App Name with Gradient Glow -->
+<h1 class="font-headline-xl text-headline-xl tracking-tight bg-gradient-to-r from-primary via-primary-container to-secondary-container bg-clip-text text-transparent">
+        Pop@Pic!
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-md">
+        Where spontaneous snapshots meet vibrant digital creativity. Step into your workspace.
+      </p>
+</div>
+<!-- Glassmorphic Authentication Card -->
+<div class="w-full bg-surface-container-lowest/80 backdrop-blur-xl rounded-xl shadow-2xl shadow-primary/10 p-8 sm:p-10 flex flex-col gap-6">
+<!-- Role Switcher Segmented Control -->
+<div class="relative p-1.5 bg-surface-container-high rounded-full flex items-center justify-between">
+<!-- Active Pill Slide Indicator -->
+<div class="absolute top-1.5 bottom-1.5 left-1.5 w-[calc(50%-6px)] bg-gradient-to-r from-primary to-secondary rounded-full shadow-md transition-all duration-300 ease-out" id="tabIndicator"></div>
+<!-- Creator Tab Button -->
+<button class="relative z-10 w-1/2 py-2.5 rounded-full flex items-center justify-center gap-2 font-label-bold text-label-bold transition-colors duration-200 text-on-primary" id="creatorTabBtn" onclick="switchPortal('creator')" type="button">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">palette</span>
+<span>Creator Portal</span>
+</button>
+<!-- Admin Tab Button -->
+<button class="relative z-10 w-1/2 py-2.5 rounded-full flex items-center justify-center gap-2 font-label-bold text-label-bold transition-colors duration-200 text-on-surface-variant" id="adminTabBtn" onclick="switchPortal('admin')" type="button">
+<span class="material-symbols-outlined text-lg">shield_person</span>
+<span>Admin Portal</span>
+</button>
+</div>
+<!-- Role Dynamic Value Proposition Box -->
+<div class="rounded-lg p-4 bg-surface-container-low transition-all duration-300 flex items-start gap-3" id="roleHighlight">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-primary" id="roleIconWrap">
+<span class="material-symbols-outlined text-xl">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-label-bold text-label-bold text-on-surface" id="roleTitle">Design &amp; Monetize Live Frames</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-0.5" id="roleDescription">
+            Access Creator Studio tools, upload viral overlay kits, and track instant revenue payouts.
+          </p>
+</div>
+</div>
+<!-- Live Role Form -->
+<form class="flex flex-col gap-5 mt-1" onsubmit="handlePortalSubmit(event)">
+<!-- Identifier Input (Email / Hardware Handle) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-bold text-label-bold text-on-surface text-sm" for="portalIdentifier" id="identifierLabel">
+              Creator Email or Studio Tag
+            </label>
+<span class="font-body-md text-body-md text-xs text-on-surface-variant" id="roleSubtext">Required</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline text-xl pointer-events-none">alternate_email</span>
+<input class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md pl-12 pr-4 py-3.5 rounded-full outline-none focus:shadow-md focus:shadow-primary/20 transition-all duration-200" id="portalIdentifier" placeholder="e.g. nova@popatpic.art" required="" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-bold text-label-bold text-on-surface text-sm" for="portalPassword">
+              Security Key / Password
+            </label>
+<a class="font-label-bold text-label-bold text-xs text-primary hover:text-secondary transition-colors duration-150" href="#">
+              Forgot Key?
+            </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline text-xl pointer-events-none">lock</span>
+<input class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md pl-12 pr-12 py-3.5 rounded-full outline-none focus:shadow-md focus:shadow-primary/20 transition-all duration-200" id="portalPassword" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password view" class="absolute right-4 text-outline hover:text-on-surface transition-colors p-1" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-xl" id="pwdToggleIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Admin Enhanced Security Check (Hidden by default in Creator mode) -->
+<div class="hidden flex-col gap-2 pt-1 transition-all duration-300" id="adminSecurityRow">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">verified_user</span>
+<span class="font-label-bold text-label-bold text-xs text-on-surface">Hardware Token / Authenticator (TOTP)</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label-bold bg-tertiary-fixed text-on-tertiary-fixed">
+              2FA ENFORCED
+            </span>
+</div>
+</div>
+<!-- Options Row: Remember Me & Device Trust -->
+<div class="flex items-center justify-between text-sm py-1">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-sm text-on-surface">Trust this terminal for 14 days</span>
+</label>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-label-bold" id="sessionStatus">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>AES-256 Cloud Link</span>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full mt-2 py-4 px-6 rounded-full font-label-bold text-label-bold text-on-primary bg-gradient-to-r from-primary to-secondary hover:from-primary-container hover:to-secondary-container shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-secondary/30 active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-2 group" id="submitAuthBtn" type="submit">
+<span id="submitBtnText">Sign In to Creator Studio</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform duration-200 text-lg">arrow_forward</span>
+</button>
+</form>
+<!-- Bottom Micro Badges / Visual Trust -->
+<div class="pt-4 flex items-center justify-around text-center text-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">filter_vintage</span>
+<span>4.9k+ Live Photobooths</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">flash_on</span>
+<span>Instant Frame Sync</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">lock_clock</span>
+<span>Zero-Lag Auth</span>
+</div>
+</div>
+</div>
+<!-- Portal External Footer Links -->
+<div class="w-full mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-label-bold text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+<span>Need Assistance?</span>
+</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+<span>Request Creator Access</span>
+</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">security</span>
+<span>Security Guidelines</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  let currentPortal = 'creator';
+
+  function switchPortal(role) {
+    currentPortal = role;
+    const indicator = document.getElementById('tabIndicator');
+    const creatorBtn = document.getElementById('creatorTabBtn');
+    const adminBtn = document.getElementById('adminTabBtn');
+
+    const roleHighlight = document.getElementById('roleHighlight');
+    const roleIconWrap = document.getElementById('roleIconWrap');
+    const roleTitle = document.getElementById('roleTitle');
+    const roleDescription = document.getElementById('roleDescription');
+    const identifierLabel = document.getElementById('identifierLabel');
+    const portalIdentifier = document.getElementById('portalIdentifier');
+    const roleSubtext = document.getElementById('roleSubtext');
+    const adminSecurityRow = document.getElementById('adminSecurityRow');
+    const submitBtnText = document.getElementById('submitBtnText');
+
+    if (role === 'creator') {
+      // Reposition Indicator
+      indicator.style.left = '6px';
+      indicator.style.width = 'calc(50% - 6px)';
+      indicator.className = 'absolute top-1.5 bottom-1.5 left-1.5 w-[calc(50%-6px)] bg-gradient-to-r from-primary to-secondary rounded-full shadow-md transition-all duration-300 ease-out';
+
+      // Button styles
+      creatorBtn.classList.add('text-on-primary');
+      creatorBtn.classList.remove('text-on-surface-variant');
+      adminBtn.classList.add('text-on-surface-variant');
+      adminBtn.classList.remove('text-on-primary');
+
+      // Role Info Box
+      roleHighlight.className = 'rounded-lg p-4 bg-surface-container-low transition-all duration-300 flex items-start gap-3';
+      roleIconWrap.className = 'w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-primary';
+      roleIconWrap.innerHTML = '<span class="material-symbols-outlined text-xl">auto_awesome</span>';
+      roleTitle.textContent = 'Design & Monetize Live Frames';
+      roleDescription.textContent = 'Access Creator Studio tools, upload viral overlay kits, and track instant revenue payouts.';
+
+      // Form Elements
+      identifierLabel.textContent = 'Creator Email or Studio Tag';
+      portalIdentifier.placeholder = 'e.g. nova@popatpic.art';
+      roleSubtext.textContent = 'Required';
+      adminSecurityRow.classList.add('hidden');
+      adminSecurityRow.classList.remove('flex');
+      submitBtnText.textContent = 'Sign In to Creator Studio';
+
+    } else {
+      // Reposition Indicator to Right
+      indicator.style.left = 'calc(50% + 0px)';
+      indicator.style.width = 'calc(50% - 6px)';
+      indicator.className = 'absolute top-1.5 bottom-1.5 left-[calc(50%+0px)] w-[calc(50%-6px)] bg-gradient-to-r from-primary via-tertiary-container to-tertiary rounded-full shadow-md transition-all duration-300 ease-out';
+
+      // Button styles
+      adminBtn.classList.add('text-on-primary');
+      adminBtn.classList.remove('text-on-surface-variant');
+      creatorBtn.classList.add('text-on-surface-variant');
+      creatorBtn.classList.remove('text-on-primary');
+
+      // Role Info Box
+      roleHighlight.className = 'rounded-lg p-4 bg-surface-container-high transition-all duration-300 flex items-start gap-3';
+      roleIconWrap.className = 'w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-tertiary';
+      roleIconWrap.innerHTML = '<span class="material-symbols-outlined text-xl">admin_panel_settings</span>';
+      roleTitle.textContent = 'Fleet Controls & Hardware Audits';
+      roleDescription.textContent = 'System moderation, live booth telemetry, real-time telemetry logs, and peripheral configuration.';
+
+      // Form Elements
+      identifierLabel.textContent = 'Admin SSO Identifier / Staff ID';
+      portalIdentifier.placeholder = 'e.g. ops-master@corp.popatpic.io';
+      roleSubtext.textContent = 'Authorized Personnel Only';
+      adminSecurityRow.classList.remove('hidden');
+      adminSecurityRow.classList.add('flex');
+      submitBtnText.textContent = 'Sign In to Admin Console';
+    }
+  }
+
+  function togglePasswordVisibility() {
+    const input = document.getElementById('portalPassword');
+    const icon = document.getElementById('pwdToggleIcon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function handlePortalSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitAuthBtn');
+    const originalText = document.getElementById('submitBtnText').textContent;
+    
+    // Simulate interactive micro-feedback
+    document.getElementById('submitBtnText').textContent = currentPortal === 'creator' ? 'Verifying Creator Key...' : 'Authorizing Hardware Token...';
+    btn.disabled = true;
+    btn.classList.add('opacity-80', 'cursor-not-allowed');
+
+    setTimeout(() => {
+      document.getElementById('submitBtnText').textContent = 'Welcome back!';
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.classList.remove('opacity-80', 'cursor-not-allowed');
+        document.getElementById('submitBtnText').textContent = originalText;
+      }, 1500);
+    }, 1000);
+  }
+</script></main></body></html>
